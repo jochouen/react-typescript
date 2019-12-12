@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
-import './ExampleComponent.scss';
+import React, { useState, useEffect } from 'react';
 
-const Example2Component: React.FC = () => {
+interface Props {
+  title: string
+}
+
+const Example2Component: React.FC<Props> = (props) => {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('useEffect');
+  });
+
   return (
     <div className="example">
-      <h1>Hooks useState example</h1>
+      <h2>{props.title}</h2>
       <p>You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>
         Click me
@@ -13,13 +21,18 @@ const Example2Component: React.FC = () => {
       <pre>
         <code>
           {`
-            import React, { useState } from 'react';
-            import './ExampleComponent.scss';
+            import React, { useState, useEffect } from 'react';
 
-            const Example2Component: React.FC = () => {
+            const Example2Component: React.FC<Props> = (props) => {
               const [count, setCount] = useState(0);
+
+              useEffect(() => {
+                console.log('useEffect');
+              });
+
               return (
                 <div className="example">
+                  <h2>{props.title}</h2>
                   <p>You clicked {count} times</p>
                   <button onClick={() => setCount(count + 1)}>
                     Click me
