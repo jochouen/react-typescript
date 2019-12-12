@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface Props {
   title: string
@@ -11,11 +11,16 @@ const Example2Component: React.FC<Props> = (props) => {
     console.log('useEffect');
   });
 
+  const updateCount = useCallback(() => {
+    setCount(count + 1)
+  }, [count])
+
+
   return (
     <div className="example">
       <h2>{props.title}</h2>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
+      <button onClick={updateCount}>
         Click me
       </button>
       <pre>
@@ -29,6 +34,10 @@ const Example2Component: React.FC<Props> = (props) => {
               useEffect(() => {
                 console.log('useEffect');
               });
+
+              const updateCount = useCallback(() => {
+                setCount(count + 1)
+              }, [count])
 
               return (
                 <div className="example">

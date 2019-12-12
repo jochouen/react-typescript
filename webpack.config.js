@@ -15,6 +15,11 @@ module.exports = {
     path: __dirname + '/public',
     filename: 'build/[name].[contenthash].js'
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
