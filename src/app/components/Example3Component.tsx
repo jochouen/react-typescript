@@ -7,9 +7,9 @@ const Example3Component: React.FC = () => {
 
   return (
     <div className="example">
-      <h2>FC(context)</h2>
+      <h2>FC(ContextApi、UseContext)</h2>
       <ThemeContext.Provider value={{'color': 'red'}}>
-          <ThemedButton />
+          <Toolbar />
         </ThemeContext.Provider>
       <pre>
         <code>
@@ -23,12 +23,20 @@ const Example3Component: React.FC = () => {
 
               return (
                 <div className="example">
-                  <h2>FC(context)</h2>
+                  <h2>FC(ContextApi、UseContext)</h2>
                   <ThemeContext.Provider value={{'color': 'red'}}>
-                      <ThemedButton />
+                      <Toolbar />
                     </ThemeContext.Provider>
                 </div>
               );
+            }
+
+            const Toolbar = ()=> {
+              return (
+                <>
+                  <ThemedButton />
+                </>
+              )
             }
 
             const ThemedButton = ()=> {
@@ -44,6 +52,14 @@ const Example3Component: React.FC = () => {
       </pre>
     </div>
   );
+}
+
+const Toolbar = ()=> {
+  return (
+    <>
+      <ThemedButton />
+    </>
+  )
 }
 
 const ThemedButton = ()=> {

@@ -6,6 +6,8 @@ import Example2Component from './components/Example2Component';
 import Example3Component from './components/Example3Component';
 import Example4Component from './components/Example4Component';
 import Example5Component from './components/Example5Component';
+import Example6Component from './components/Example6Component';
+import Example7Component from './components/Example7Component';
 
 const App = () => {
   return (
@@ -14,8 +16,10 @@ const App = () => {
       <Example1Component />
       <Example2Component title="Hooks(UseState、UseEffect、UseCallback)" />
       <Example3Component />
+      <Example7Component />
       <Example4Component title="Class Base(Props、State、ライフサイクル)" />
       <Example5Component />
+      <Example6Component />
     </div>
   );
 }
