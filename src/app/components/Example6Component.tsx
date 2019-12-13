@@ -9,7 +9,6 @@ class Example6Component extends React.Component {
   }
 
   componentDidMount() {
-    console.log(1111, this.textInput.current);
     this.textInput.current.focusTextInput();
   }
 
