@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 const ThemeContext = React.createContext({
   color: 'light'
@@ -14,7 +14,7 @@ const Example3Component: React.FC = () => {
       <pre>
         <code>
           {`
-            import React from 'react';
+            import React, { useContext } from 'react';
 
             const ThemeContext = React.createContext({
               color: 'light'
@@ -32,12 +32,9 @@ const Example3Component: React.FC = () => {
             }
 
             const ThemedButton = ()=> {
+              const theme = useContext(ThemeContext);
               return (
-                <ThemeContext.Consumer>
-                {context => (
-                  <div>color: {context.color}</div>
-                )}
-                </ThemeContext.Consumer>
+                <div>color: {theme.color}</div>
               )
             }
 
@@ -50,12 +47,9 @@ const Example3Component: React.FC = () => {
 }
 
 const ThemedButton = ()=> {
+  const theme = useContext(ThemeContext);
   return (
-    <ThemeContext.Consumer>
-    {context => (
-      <div>color: {context.color}</div>
-    )}
-    </ThemeContext.Consumer>
+    <div>color: {theme.color}</div>
   )
 }
 
