@@ -14,7 +14,7 @@ const App = () => {
     <div>
       <h1>Examples</h1>
       <Example1Component />
-      <Example2Component title="Hooks(UseState、UseEffect、UseCallback)" />
+      <Example2Component title="Hooks(UseState、UseEffect、UseCallback、UseRef)" />
       <Example3Component />
       <Example7Component />
       <Example4Component title="Class Base(Props、State、ライフサイクル)" />
