@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import './components/ExampleComponent.scss';
 import Example1Component from './components/Example1Component';
 import Example2Component from './components/Example2Component';
@@ -25,6 +27,8 @@ const App = () => {
 }
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById("app")
 );
