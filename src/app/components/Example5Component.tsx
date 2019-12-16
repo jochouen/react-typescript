@@ -4,7 +4,7 @@ const ThemeContext = React.createContext({
 });
 
 class Example5Component extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
   }
 

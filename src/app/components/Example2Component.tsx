@@ -80,7 +80,7 @@ const Example2Component: React.FC<Props> = (props) => {
   );
 }
 
-const ChildrenComponent = forwardRef<HTMLInputElement>((props, ref) => {
+const ChildrenComponent = forwardRef<HTMLInputElement>((props, ref: any) => {
   const copyText = () => {
     document.execCommand('copy');
     alert(`クリップボードにコピーしました: ${ref['current'].value}`);

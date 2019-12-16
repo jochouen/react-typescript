@@ -16,15 +16,16 @@ export enum actionTypes {
   */
 
 export function addTodo(item: string) {
+  console.log('item', item);
   return {
     type: actionTypes.ADD_TODO,
-    item
+    payload: item
   }
 }
 
 export function deleteTodo(index: number) {
   return {
     type: actionTypes.DELETE_TODO,
-    index
+    payload: index
   }
 }

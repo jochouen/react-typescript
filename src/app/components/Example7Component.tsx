@@ -1,8 +1,8 @@
-import React, { createRef, forwardRef } from 'react';
+import React, { createRef, forwardRef, ObjectHTMLAttributes } from 'react';
 
 
 const Example7Component: React.FC = () => {
-  const textInput = createRef<HTMLInputElement>();
+  const textInput: any = createRef<HTMLInputElement>();
 
   const handleClick = () => {
     if (textInput['current'].value.length > 0) {

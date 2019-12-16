@@ -10,6 +10,7 @@ import Example4Component from './components/Example4Component';
 import Example5Component from './components/Example5Component';
 import Example6Component from './components/Example6Component';
 import Example7Component from './components/Example7Component';
+import TodoContainer from './containers/TodoContainer';
 
 const App = () => {
   return (
@@ -22,13 +23,15 @@ const App = () => {
       <Example4Component title="Class Base(Props、State、ライフサイクル)" />
       <Example5Component />
       <Example6Component />
+      <h2>TODO</h2>
+      <Provider store={store}>
+        <TodoContainer />
+      </Provider>
     </div>
   );
 }
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App />,
   document.getElementById("app")
 );

@@ -3,13 +3,13 @@ import React, { createRef } from 'react';
 class Example6Component extends React.Component {
   textInput: React.RefObject<ChildrenComponent>;
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.textInput = createRef();
   }
 
   componentDidMount() {
-    this.textInput.current.focusTextInput();
+    this.textInput.current!.focusTextInput();
   }
 
   render () {
@@ -84,14 +84,14 @@ class Example6Component extends React.Component {
 
 class ChildrenComponent extends React.Component {
   inputRef: React.RefObject<HTMLInputElement>;
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.inputRef = createRef();
     this.focusTextInput = this.focusTextInput.bind(this);
   }
 
   focusTextInput() {
-    this.inputRef.current.focus();
+    this.inputRef.current!.focus();
   }
 
   render(){

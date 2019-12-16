@@ -9,7 +9,7 @@ interface State {
 }
 
 class Example4Component extends React.Component<Props, State> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       count : 0
